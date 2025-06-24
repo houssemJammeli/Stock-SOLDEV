@@ -3,6 +3,7 @@ using GestionStock.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -33,6 +34,27 @@ builder.Services.AddAuthentication("Bearer")
     });
 
 builder.Services.AddAuthorization();
+
+//Ignore les références circulaires, pas besoin de tout suivre jusqu’au bout
+builder.Services.AddControllers()
+    .AddJsonOptions(x =>
+    {
+        x.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+        x.JsonSerializerOptions.WriteIndented = true;
+    });
+
+
+//connect Front 'allow'
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngular",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
 
 //tester auth avec swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -84,6 +106,8 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseSwagger();
 app.UseSwaggerUI();
+//connect Front 'allow'
+app.UseCors("AllowAngular");
 //houssem
 
 app.UseAuthorization();

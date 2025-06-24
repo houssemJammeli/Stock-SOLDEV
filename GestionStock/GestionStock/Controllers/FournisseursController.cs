@@ -1,4 +1,5 @@
 ﻿using GestionStock.Context;
+using GestionStock.DTOs;
 using GestionStock.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -6,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GestionStock.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class FournisseursController : ControllerBase
@@ -20,11 +21,20 @@ namespace GestionStock.Controllers
 
         // GET: api/Fournisseurs
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Fournisseur>>> GetFournisseurs()
+        public async Task<ActionResult<IEnumerable<FournisseurDto>>> GetFournisseurs()
         {
-            return await _context.Fournisseurs
-                .Include(f => f.Produits)
+            var fournisseurs = await _context.Fournisseurs
+                .Select(f => new FournisseurDto
+                {
+                    Id = f.Id,
+                    Nom = f.Nom,
+                    Email = f.Email,
+                    Telephone = f.Telephone,
+                    Adresse = f.Adresse
+                })
                 .ToListAsync();
+
+            return Ok(fournisseurs);
         }
 
         // GET: api/Fournisseurs/5
@@ -43,36 +53,45 @@ namespace GestionStock.Controllers
 
         // POST: api/Fournisseurs
         [HttpPost]
-        public async Task<ActionResult<Fournisseur>> PostFournisseur(Fournisseur fournisseur)
+        public async Task<ActionResult<FournisseurDto>> CreateFournisseur(FournisseurCreateDto dto)
         {
+            var fournisseur = new Fournisseur
+            {
+                Nom = dto.Nom,
+                Email = dto.Email,
+                Telephone = dto.Telephone,
+                Adresse = dto.Adresse
+            };
+
             _context.Fournisseurs.Add(fournisseur);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetFournisseur), new { id = fournisseur.Id }, fournisseur);
+            var result = new FournisseurDto
+            {
+                Id = fournisseur.Id,
+                Nom = fournisseur.Nom,
+                Email = fournisseur.Email,
+                Telephone = fournisseur.Telephone,
+                Adresse = fournisseur.Adresse
+            };
+
+            return CreatedAtAction(nameof(GetFournisseurs), new { id = fournisseur.Id }, result);
         }
 
         // PUT: api/Fournisseurs/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutFournisseur(int id, Fournisseur fournisseur)
+        public async Task<IActionResult> UpdateFournisseur(int id, FournisseurUpdateDto dto)
         {
-            if (id != fournisseur.Id)
-                return BadRequest();
+            var fournisseur = await _context.Fournisseurs.FindAsync(id);
+            if (fournisseur is null) return NotFound();
 
-            _context.Entry(fournisseur).State = EntityState.Modified;
+            fournisseur.Nom = dto.Nom;
+            fournisseur.Email = dto.Email;
+            fournisseur.Telephone = dto.Telephone;
+            fournisseur.Adresse = dto.Adresse;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!FournisseurExists(id))
-                    return NotFound();
-                else
-                    throw;
-            }
-
-            return NoContent();
+            await _context.SaveChangesAsync();
+            return NoContent();                      // 204 si tout va bien
         }
 
         // DELETE: api/Fournisseurs/5
@@ -80,13 +99,13 @@ namespace GestionStock.Controllers
         public async Task<IActionResult> DeleteFournisseur(int id)
         {
             var fournisseur = await _context.Fournisseurs.FindAsync(id);
-            if (fournisseur == null)
+            if (fournisseur is null)
                 return NotFound();
 
             _context.Fournisseurs.Remove(fournisseur);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return NoContent(); // 204 = suppression OK
         }
 
         private bool FournisseurExists(int id)

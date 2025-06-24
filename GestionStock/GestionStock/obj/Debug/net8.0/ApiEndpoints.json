@@ -150,7 +150,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestionStock.Models.Fournisseur, GestionStock, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestionStock.DTOs.FournisseurDto, GestionStock, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -162,21 +162,21 @@
   },
   {
     "ContainingType": "GestionStock.Controllers.FournisseursController",
-    "Method": "PostFournisseur",
+    "Method": "CreateFournisseur",
     "RelativePath": "api/Fournisseurs",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "fournisseur",
-        "Type": "GestionStock.Models.Fournisseur",
+        "Name": "dto",
+        "Type": "GestionStock.DTOs.FournisseurCreateDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "GestionStock.Models.Fournisseur",
+        "Type": "GestionStock.DTOs.FournisseurDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -214,7 +214,7 @@
   },
   {
     "ContainingType": "GestionStock.Controllers.FournisseursController",
-    "Method": "PutFournisseur",
+    "Method": "UpdateFournisseur",
     "RelativePath": "api/Fournisseurs/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -226,8 +226,8 @@
         "IsRequired": true
       },
       {
-        "Name": "fournisseur",
-        "Type": "GestionStock.Models.Fournisseur",
+        "Name": "dto",
+        "Type": "GestionStock.DTOs.FournisseurUpdateDto",
         "IsRequired": true
       }
     ],
