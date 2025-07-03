@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\2d8af484-9d85-4943-a6d7-2616916bf88b.jpg",
+      "PackagePath": "staticwebassets\\images\\2d8af484-9d85-4943-a6d7-2616916bf88b.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GestionStock.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GestionStock.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.GestionStock.props",
+      "PackagePath": "build\\GestionStock.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.GestionStock.props",
+      "PackagePath": "buildMultiTargeting\\GestionStock.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.GestionStock.props",
+      "PackagePath": "buildTransitive\\GestionStock.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

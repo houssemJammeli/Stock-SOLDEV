@@ -67,6 +67,40 @@
         }
       }
     },
+    "/api/Commandes/panier/valider": {
+      "post": {
+        "tags": [
+          "Commandes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Commandes": {
       "get": {
         "tags": [
@@ -622,6 +656,93 @@
         }
       }
     },
+    "/api/Panier": {
+      "get": {
+        "tags": [
+          "Panier"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PanierDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PanierDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PanierDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Panier"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LignePanierDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LignePanierDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LignePanierDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Panier"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LignePanierDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LignePanierDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LignePanierDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Produits": {
       "get": {
         "tags": [
@@ -635,7 +756,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Produit"
+                    "$ref": "#/components/schemas/ProduitDto"
                   }
                 }
               },
@@ -643,7 +764,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Produit"
+                    "$ref": "#/components/schemas/ProduitDto"
                   }
                 }
               },
@@ -651,7 +772,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Produit"
+                    "$ref": "#/components/schemas/ProduitDto"
                   }
                 }
               }
@@ -800,6 +921,90 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Produits/upload": {
+      "post": {
+        "tags": [
+          "Produits"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Nom": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
+                  "QuantiteEnStock": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "PrixUnitaire": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Categorie": {
+                    "type": "string"
+                  },
+                  "FournisseurId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Image": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "ImageUrl": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "Id": {
+                  "style": "form"
+                },
+                "Nom": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "QuantiteEnStock": {
+                  "style": "form"
+                },
+                "PrixUnitaire": {
+                  "style": "form"
+                },
+                "Categorie": {
+                  "style": "form"
+                },
+                "FournisseurId": {
+                  "style": "form"
+                },
+                "Image": {
+                  "style": "form"
+                },
+                "ImageUrl": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -1043,7 +1248,8 @@
           },
           "dateVente": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "nullable": true
           },
           "clientId": {
             "type": "integer",
@@ -1197,6 +1403,20 @@
         },
         "additionalProperties": false
       },
+      "LignePanierDTO": {
+        "type": "object",
+        "properties": {
+          "quantite": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "produitId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "LoginDto": {
         "type": "object",
         "properties": {
@@ -1206,6 +1426,19 @@
           },
           "password": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PanierDTO": {
+        "type": "object",
+        "properties": {
+          "lignes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LignePanierDTO"
+            },
             "nullable": true
           }
         },
@@ -1238,6 +1471,10 @@
             "type": "string",
             "nullable": true
           },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
           "lignesCommande": {
             "type": "array",
             "items": {
@@ -1251,6 +1488,49 @@
           },
           "fournisseur": {
             "$ref": "#/components/schemas/Fournisseur"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProduitDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nom": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantiteEnStock": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prixUnitaire": {
+            "type": "number",
+            "format": "double"
+          },
+          "categorie": {
+            "type": "string",
+            "nullable": true
+          },
+          "fournisseurId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "image": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GestionStock.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class CommandesController : ControllerBase
@@ -17,6 +17,43 @@ namespace GestionStock.Controllers
         {
             _context = context;
         }
+
+
+        [HttpPost("panier/valider")]
+        public async Task<IActionResult> ValiderPanier([FromBody] int clientId)
+        {
+            var panier = await _context.Commandes
+                .Include(c => c.LignesCommande)
+                .ThenInclude(lc => lc.Produit)
+                .FirstOrDefaultAsync(c => c.ClientId == clientId && c.DateVente == null);
+
+            if (panier == null)
+                return NotFound("Panier introuvable");
+
+            // Vérifie si le panier contient des produits
+            if (panier.LignesCommande == null || !panier.LignesCommande.Any())
+                return BadRequest("Le panier est vide");
+
+            // Mettre à jour DateVente
+            panier.DateVente = DateTime.Now;
+
+            // Facultatif : Mettre à jour le stock des produits
+            foreach (var ligne in panier.LignesCommande)
+            {
+                var produit = await _context.Produits.FindAsync(ligne.ProduitId);
+                if (produit != null)
+                {
+                    produit.QuantiteEnStock -= ligne.Quantite;
+                }
+            }
+
+            await _context.SaveChangesAsync();
+
+            return Ok("Commande validée avec succès !");
+        }
+
+
+
 
         // GET: api/Commandes
         [HttpGet]

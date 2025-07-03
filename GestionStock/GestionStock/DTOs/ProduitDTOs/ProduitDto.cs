@@ -1,6 +1,6 @@
-﻿namespace GestionStock.Models
+﻿namespace GestionStock.DTOs.ProduitDTOs
 {
-    public class Produit
+    public class ProduitDto
     {
         public int Id { get; set; }
         public string Nom { get; set; }
@@ -8,10 +8,8 @@
         public int QuantiteEnStock { get; set; }
         public decimal PrixUnitaire { get; set; }
         public string Categorie { get; set; }
-        public string ImageUrl { get; set; }
-
-        public ICollection<LigneCommande> LignesCommande { get; set; }
         public int FournisseurId { get; set; }
-        public Fournisseur Fournisseur { get; set; }
+        public IFormFile Image { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

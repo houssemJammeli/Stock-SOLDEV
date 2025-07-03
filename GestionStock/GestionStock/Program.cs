@@ -3,6 +3,9 @@ using GestionStock.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
+//houssem
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+//houssem
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -56,6 +59,7 @@ builder.Services.AddCors(options =>
         });
 });
 
+
 //tester auth avec swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -106,6 +110,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseStaticFiles();
 //connect Front 'allow'
 app.UseCors("AllowAngular");
 //houssem

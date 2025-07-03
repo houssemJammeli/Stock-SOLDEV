@@ -141,6 +141,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GestionStock.Controllers.CommandesController",
+    "Method": "ValiderPanier",
+    "RelativePath": "api/Commandes/panier/valider",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GestionStock.Controllers.FournisseursController",
     "Method": "GetFournisseurs",
     "RelativePath": "api/Fournisseurs",
@@ -359,6 +375,58 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GestionStock.Controllers.PanierController",
+    "Method": "Get",
+    "RelativePath": "api/Panier",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "GestionStock.DTOs.PanierDTO.PanierDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestionStock.Controllers.PanierController",
+    "Method": "AjouterProduitAuPanier",
+    "RelativePath": "api/Panier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "GestionStock.DTOs.PanierDTO.LignePanierDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionStock.Controllers.PanierController",
+    "Method": "SupprimerProduitAuPanier",
+    "RelativePath": "api/Panier",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "GestionStock.DTOs.PanierDTO.LignePanierDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GestionStock.Controllers.ProduitsController",
     "Method": "GetProduits",
     "RelativePath": "api/Produits",
@@ -368,7 +436,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestionStock.Models.Produit, GestionStock, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestionStock.DTOs.ProduitDTOs.ProduitDto, GestionStock, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -463,6 +531,62 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionStock.Controllers.ProduitsController",
+    "Method": "AjouterProduitAvecImage",
+    "RelativePath": "api/Produits/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nom",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "QuantiteEnStock",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PrixUnitaire",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Categorie",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FournisseurId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

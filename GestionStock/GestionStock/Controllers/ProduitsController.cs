@@ -1,4 +1,5 @@
 ﻿using GestionStock.Context;
+using GestionStock.DTOs.ProduitDTOs;
 using GestionStock.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -6,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GestionStock.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class ProduitsController : ControllerBase
@@ -20,10 +21,21 @@ namespace GestionStock.Controllers
 
         // GET: api/Produits
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Produit>>> GetProduits()
+        public async Task<ActionResult<IEnumerable<ProduitDto>>> GetProduits()
         {
             return await _context.Produits
                 .Include(p => p.Fournisseur)
+                .Select(p => new ProduitDto()
+                {
+                    Id = p.Id,
+                    Nom = p.Nom,
+                    Description = p.Description,
+                    PrixUnitaire = p.PrixUnitaire,
+                    QuantiteEnStock = p.QuantiteEnStock,
+                    Categorie = p.Categorie,
+                    FournisseurId = p.FournisseurId,
+                    ImageUrl = p.ImageUrl
+                })
                 .ToListAsync();
         }
 
@@ -50,6 +62,38 @@ namespace GestionStock.Controllers
 
             return CreatedAtAction(nameof(GetProduit), new { id = produit.Id }, produit);
         }
+
+        [HttpPost("upload")]
+        public async Task<IActionResult> AjouterProduitAvecImage([FromForm] ProduitDto produitDto)
+        {
+            if (produitDto.Image == null || produitDto.Image.Length == 0)
+                return BadRequest("Aucune image reçue.");
+
+            var imageName = Guid.NewGuid().ToString() + Path.GetExtension(produitDto.Image.FileName);
+            var imagePath = Path.Combine("wwwroot/images", imageName);
+
+            using (var stream = new FileStream(imagePath, FileMode.Create))
+            {
+                await produitDto.Image.CopyToAsync(stream);
+            }
+
+            var produit = new Produit
+            {
+                Nom = produitDto.Nom,
+                Description = produitDto.Description,
+                QuantiteEnStock = produitDto.QuantiteEnStock,
+                PrixUnitaire = produitDto.PrixUnitaire,
+                Categorie = produitDto.Categorie,
+                FournisseurId = produitDto.FournisseurId,
+                ImageUrl = $"images/{imageName}"
+            };
+
+            _context.Produits.Add(produit);
+            await _context.SaveChangesAsync();
+
+            return Ok(produit);
+        }
+
 
         // PUT: api/Produits/5
         [HttpPut("{id}")]

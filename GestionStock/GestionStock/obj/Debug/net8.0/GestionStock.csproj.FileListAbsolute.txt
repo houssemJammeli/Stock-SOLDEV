@@ -347,3 +347,4 @@ C:\Users\FK Info\Desktop\4EmeAnn tek up\Stage\Stock-SOLDEV\GestionStock\GestionS
 C:\Users\FK Info\Desktop\4EmeAnn tek up\Stage\Stock-SOLDEV\GestionStock\GestionStock\obj\Debug\net8.0\GestionStock.pdb
 C:\Users\FK Info\Desktop\4EmeAnn tek up\Stage\Stock-SOLDEV\GestionStock\GestionStock\obj\Debug\net8.0\GestionStock.genruntimeconfig.cache
 C:\Users\FK Info\Desktop\4EmeAnn tek up\Stage\Stock-SOLDEV\GestionStock\GestionStock\obj\Debug\net8.0\ref\GestionStock.dll
+C:\Users\FK Info\Desktop\4EmeAnn tek up\Stage\Stock-SOLDEV\GestionStock\GestionStock\bin\Debug\net8.0\GestionStock.staticwebassets.runtime.json
