@@ -20,6 +20,7 @@ namespace GestionStock.Controllers
         }
 
         // GET: api/Fournisseurs
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<FournisseurDto>>> GetFournisseurs()
         {

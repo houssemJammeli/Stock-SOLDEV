@@ -83,6 +83,88 @@
           "Value": "images/2d8af484-9d85-4943-a6d7-2616916bf88b.jpg"
         }
       ]
+    },
+    {
+      "Route": "images/75b95806-354b-4184-8cb2-1b72e78d3918.jpg",
+      "AssetFile": "images/75b95806-354b-4184-8cb2-1b72e78d3918.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "107357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b9tQCQaS0ViXb1TleSaMmT4x/hAavOWySUbngiM5TsI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Jul 2025 11:22:58 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-b9tQCQaS0ViXb1TleSaMmT4x/hAavOWySUbngiM5TsI="
+        }
+      ]
+    },
+    {
+      "Route": "images/75b95806-354b-4184-8cb2-1b72e78d3918.tl8k4a17hf.jpg",
+      "AssetFile": "images/75b95806-354b-4184-8cb2-1b72e78d3918.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "107357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b9tQCQaS0ViXb1TleSaMmT4x/hAavOWySUbngiM5TsI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Jul 2025 11:22:58 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tl8k4a17hf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-b9tQCQaS0ViXb1TleSaMmT4x/hAavOWySUbngiM5TsI="
+        },
+        {
+          "Name": "label",
+          "Value": "images/75b95806-354b-4184-8cb2-1b72e78d3918.jpg"
+        }
+      ]
     }
   ]
 }

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\images\\2d8af484-9d85-4943-a6d7-2616916bf88b.jpg"
     },
     {
+      "Id": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\75b95806-354b-4184-8cb2-1b72e78d3918.jpg",
+      "PackagePath": "staticwebassets\\images\\75b95806-354b-4184-8cb2-1b72e78d3918.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GestionStock.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

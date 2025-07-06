@@ -967,9 +967,6 @@
                   "Image": {
                     "type": "string",
                     "format": "binary"
-                  },
-                  "ImageUrl": {
-                    "type": "string"
                   }
                 }
               },
@@ -996,9 +993,6 @@
                   "style": "form"
                 },
                 "Image": {
-                  "style": "form"
-                },
-                "ImageUrl": {
                   "style": "form"
                 }
               }

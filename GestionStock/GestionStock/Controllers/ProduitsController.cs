@@ -64,10 +64,11 @@ namespace GestionStock.Controllers
         }
 
         [HttpPost("upload")]
-        public async Task<IActionResult> AjouterProduitAvecImage([FromForm] ProduitDto produitDto)
+        public async Task<IActionResult> AjouterProduitAvecImage([FromForm] ProduitUploadDto produitDto)
         {
             if (produitDto.Image == null || produitDto.Image.Length == 0)
-                return BadRequest("Aucune image reçue.");
+                return BadRequest(new { message = "Aucune image reçue par le serveur." });
+
 
             var imageName = Guid.NewGuid().ToString() + Path.GetExtension(produitDto.Image.FileName);
             var imagePath = Path.Combine("wwwroot/images", imageName);
