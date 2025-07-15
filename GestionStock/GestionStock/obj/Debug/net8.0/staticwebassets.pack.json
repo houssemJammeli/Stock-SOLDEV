@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\images\\2d8af484-9d85-4943-a6d7-2616916bf88b.jpg"
     },
     {
+      "Id": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\32392664-3976-4f95-974a-12b33f0f0a63.jpg",
+      "PackagePath": "staticwebassets\\images\\32392664-3976-4f95-974a-12b33f0f0a63.jpg"
+    },
+    {
       "Id": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\75b95806-354b-4184-8cb2-1b72e78d3918.jpg",
       "PackagePath": "staticwebassets\\images\\75b95806-354b-4184-8cb2-1b72e78d3918.jpg"
+    },
+    {
+      "Id": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\ee881910-59fc-4b3e-9d78-74092bd0984c.jpg",
+      "PackagePath": "staticwebassets\\images\\ee881910-59fc-4b3e-9d78-74092bd0984c.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GestionStock.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

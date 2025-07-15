@@ -96,6 +96,45 @@ namespace GestionStock.Controllers
         }
 
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutProduitAvecImage(int id, [FromForm] ProduitUploadDto dto)
+        {
+            try
+            {
+                var produit = await _context.Produits.FindAsync(id);
+                if (produit == null)
+                    return NotFound();
+
+                produit.Nom = dto.Nom;
+                produit.Description = dto.Description;
+                produit.QuantiteEnStock = dto.QuantiteEnStock;
+                produit.PrixUnitaire = dto.PrixUnitaire;
+                produit.Categorie = dto.Categorie;
+                produit.FournisseurId = dto.FournisseurId;
+
+                if (dto.Image != null && dto.Image.Length > 0)
+                {
+                    var imageName = Guid.NewGuid().ToString() + Path.GetExtension(dto.Image.FileName);
+                    var imagePath = Path.Combine("wwwroot/images", imageName);
+
+                    using (var stream = new FileStream(imagePath, FileMode.Create))
+                    {
+                        await dto.Image.CopyToAsync(stream);
+                    }
+
+                    produit.ImageUrl = $"images/{imageName}";
+                }
+
+                await _context.SaveChangesAsync();
+                return Ok(new { message = "Produit mis à jour avec succès !" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = $"Erreur serveur : {ex.Message}" });
+            }
+        }
+
+        /*
         // PUT: api/Produits/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProduit(int id, Produit produit)
@@ -119,6 +158,7 @@ namespace GestionStock.Controllers
 
             return NoContent();
         }
+        */
 
         // DELETE: api/Produits/5
         [HttpDelete("{id}")]
@@ -131,7 +171,7 @@ namespace GestionStock.Controllers
             _context.Produits.Remove(produit);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok("Produit supprimé avec succès !");
         }
 
         private bool ProduitExists(int id)

@@ -9,6 +9,6 @@
         public decimal PrixUnitaire { get; set; }
         public string Categorie { get; set; }
         public int FournisseurId { get; set; }
-        public IFormFile Image { get; set; }
+        public IFormFile? Image { get; set; }
     }
 }

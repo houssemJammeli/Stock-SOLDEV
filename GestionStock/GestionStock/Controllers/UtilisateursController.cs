@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GestionStock.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class UtilisateursController : ControllerBase
@@ -54,6 +54,36 @@ namespace GestionStock.Controllers
             if (id != utilisateur.Id)
                 return BadRequest();
 
+            var utilisateurExistant = await _context.Utilisateurs.FindAsync(id);
+            if (utilisateurExistant == null)
+                return NotFound();
+
+            // Mettre à jour les champs manuellement
+            utilisateurExistant.Nom = utilisateur.Nom;
+            utilisateurExistant.Email = utilisateur.Email;
+            utilisateurExistant.Telephone = utilisateur.Telephone;
+            utilisateurExistant.Adresse = utilisateur.Adresse;
+            utilisateurExistant.Role = utilisateur.Role;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+                return NoContent();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return StatusCode(500, "Erreur lors de la mise à jour.");
+            }
+        }
+
+
+        /*
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutUtilisateur(int id, Utilisateur utilisateur)
+        {
+            if (id != utilisateur.Id)
+                return BadRequest();
+
             _context.Entry(utilisateur).State = EntityState.Modified;
 
             try
@@ -70,6 +100,7 @@ namespace GestionStock.Controllers
 
             return NoContent();
         }
+        */
 
         // DELETE: api/Utilisateurs/5
         [HttpDelete("{id}")]

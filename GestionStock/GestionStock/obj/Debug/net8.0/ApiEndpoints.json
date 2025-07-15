@@ -1,5 +1,35 @@
 [
   {
+    "ContainingType": "GestionStock.Controllers.AdminDashboardController",
+    "Method": "GetStats",
+    "RelativePath": "api/AdminDashboard/stats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionStock.Controllers.AdminDashboardController",
+    "Method": "GetTopProduits",
+    "RelativePath": "api/AdminDashboard/top-produits",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionStock.Controllers.AdminDashboardController",
+    "Method": "GetVentesRecentes",
+    "RelativePath": "api/AdminDashboard/ventes-recentes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GestionStock.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
@@ -33,6 +63,22 @@
   },
   {
     "ContainingType": "GestionStock.Controllers.CommandesController",
+    "Method": "CreerCommande",
+    "RelativePath": "api/Commandes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "GestionStock.DTOs.CommandeDTO.CommandeCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionStock.Controllers.CommandesController",
     "Method": "GetCommandes",
     "RelativePath": "api/Commandes",
     "HttpMethod": "GET",
@@ -42,32 +88,6 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[GestionStock.Models.Commande, GestionStock, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "GestionStock.Controllers.CommandesController",
-    "Method": "PostCommande",
-    "RelativePath": "api/Commandes",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "commande",
-        "Type": "GestionStock.Models.Commande",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "GestionStock.Models.Commande",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -142,9 +162,29 @@
   },
   {
     "ContainingType": "GestionStock.Controllers.CommandesController",
-    "Method": "ValiderPanier",
-    "RelativePath": "api/Commandes/panier/valider",
-    "HttpMethod": "POST",
+    "Method": "GetToutesLesCommandes",
+    "RelativePath": "api/Commandes/admin/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestionStock.DTOs.CommandeDTO.CommandeDto, GestionStock, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestionStock.Controllers.CommandesController",
+    "Method": "GetCommandesClient",
+    "RelativePath": "api/Commandes/client/{clientId}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -154,7 +194,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestionStock.Models.Commande, GestionStock, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "GestionStock.Controllers.FournisseursController",
@@ -500,7 +550,7 @@
   },
   {
     "ContainingType": "GestionStock.Controllers.ProduitsController",
-    "Method": "PutProduit",
+    "Method": "PutProduitAvecImage",
     "RelativePath": "api/Produits/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -512,9 +562,44 @@
         "IsRequired": true
       },
       {
-        "Name": "produit",
-        "Type": "GestionStock.Models.Produit",
-        "IsRequired": true
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nom",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "QuantiteEnStock",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PrixUnitaire",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Categorie",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FournisseurId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -53,7 +53,15 @@ namespace GestionStock.Controllers
         [HttpDelete]
         public async Task<IActionResult> SupprimerProduitAuPanier([FromBody] LignePanierDTO dto)
         {
-            GetPanier().Lignes.Remove(dto);
+            var lignes = GetPanier().Lignes;
+            foreach (var ligne in lignes)
+            {
+                if (ligne.ProduitId == dto.ProduitId)
+                {
+                    lignes.Remove(ligne);
+                    return Ok(panier);
+                }
+            }
             return Ok(panier);
         }
     }

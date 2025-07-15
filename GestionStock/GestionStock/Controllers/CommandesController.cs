@@ -1,5 +1,7 @@
 ﻿using GestionStock.Context;
+using GestionStock.DTOs.CommandeDTO;
 using GestionStock.Models;
+using GestionStock.Models.EnumsCommande;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +20,138 @@ namespace GestionStock.Controllers
             _context = context;
         }
 
+        [HttpPost]
+        public async Task<IActionResult> CreerCommande([FromBody] CommandeCreateDto dto)
+        {
+            if (!_context.Utilisateurs.Any(u => u.Id == dto.ClientId))
+                return BadRequest("Client non trouvé");
 
+            var dateVente = DateTime.Now;
+
+            int joursDelai = dto.TypeLivraison switch
+            {
+                TypeLivraison.Standard => 7,
+                TypeLivraison.Express => 3,
+                _ => 7
+            };
+
+            var commande = new Commande
+            {
+                ClientId = dto.ClientId,
+                DateVente = dateVente,
+                Total = dto.Total,
+                TypeLivraison = dto.TypeLivraison,
+                EtatCommande = EtatCommande.Preparation, // état initial
+                DateLivraisonPrevue = dateVente.AddDays(joursDelai),
+                LignesCommande = dto.Lignes.Select(l => new LigneCommande
+                {
+                    ProduitId = l.ProduitId,
+                    Quantite = l.Quantite
+                }).ToList()
+            };
+
+            _context.Commandes.Add(commande);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { commande.Id });
+        }
+
+        private EtatCommande CalculerEtatCommande(Commande commande)
+        {
+            var joursDepuisVente = (DateTime.Now - commande.DateVente)?.TotalDays ?? 0;
+
+            if (commande.TypeLivraison == TypeLivraison.Standard)
+            {
+                if (joursDepuisVente < 3)
+                    return EtatCommande.Preparation;
+                else if (joursDepuisVente < 6)
+                    return EtatCommande.EnCoursLivraison;
+                else
+                    return EtatCommande.Livree;
+            }
+            else if (commande.TypeLivraison == TypeLivraison.Express)
+            {
+                if (joursDepuisVente < 1)
+                    return EtatCommande.Preparation;
+                else if (joursDepuisVente < 2)
+                    return EtatCommande.EnCoursLivraison;
+                else
+                    return EtatCommande.Livree;
+            }
+
+            return EtatCommande.Preparation;
+        }
+
+        [HttpGet("client/{clientId}")]
+        public async Task<ActionResult<IEnumerable<Commande>>> GetCommandesClient(int clientId)
+        {
+            var commandes = await _context.Commandes
+                .Include(c => c.LignesCommande)
+                .Where(c => c.ClientId == clientId)
+                .ToListAsync();
+
+            foreach (var commande in commandes)
+            {
+                var nouvelEtat = CalculerEtatCommande(commande);
+                if (commande.EtatCommande != nouvelEtat)
+                {
+                    commande.EtatCommande = nouvelEtat;
+                    _context.Entry(commande).Property(c => c.EtatCommande).IsModified = true;
+                }
+            }
+
+            await _context.SaveChangesAsync();
+
+            return commandes;
+        }
+
+        [HttpGet("admin/all")]
+        public async Task<ActionResult<IEnumerable<CommandeDto>>> GetToutesLesCommandes()
+        {
+            var commandes = await _context.Commandes
+                .Include(c => c.Client)
+                .ToListAsync();
+
+            var commandesDto = commandes.Select(c => new CommandeDto
+            {
+                Id = c.Id,
+                DateVente = c.DateVente,
+                Total = c.Total,
+                NomClient = c.Client.Nom,
+                EmailClient = c.Client.Email,
+                EtatCommande = c.EtatCommande.ToString()
+            }).ToList();
+
+            return Ok(commandesDto);
+        }
+
+        /*
+        [HttpPost]
+        public async Task<IActionResult> CreerCommande([FromBody] CommandeCreateDto dto)
+        {
+            if (!_context.Utilisateurs.Any(u => u.Id == dto.ClientId))
+                return BadRequest("Client non trouvé");
+
+            var commande = new Commande
+            {
+                ClientId = dto.ClientId,
+                DateVente = DateTime.Now,
+                Total = dto.Total,
+                LignesCommande = dto.Lignes.Select(l => new LigneCommande
+                {
+                    ProduitId = l.ProduitId,
+                    Quantite = l.Quantite
+                }).ToList()
+            };
+
+            _context.Commandes.Add(commande);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { commande.Id });
+        }
+        */
+
+        /*
         [HttpPost("panier/valider")]
         public async Task<IActionResult> ValiderPanier([FromBody] int clientId)
         {
@@ -51,6 +184,7 @@ namespace GestionStock.Controllers
 
             return Ok("Commande validée avec succès !");
         }
+        */
 
 
 
@@ -82,6 +216,7 @@ namespace GestionStock.Controllers
             return commande;
         }
 
+        /*
         // POST: api/Commandes
         [HttpPost]
         public async Task<ActionResult<Commande>> PostCommande(Commande commande)
@@ -91,6 +226,7 @@ namespace GestionStock.Controllers
 
             return CreatedAtAction(nameof(GetCommande), new { id = commande.Id }, commande);
         }
+        */
 
         // PUT: api/Commandes/5
         [HttpPut("{id}")]

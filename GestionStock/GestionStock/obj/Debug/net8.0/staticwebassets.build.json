@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jmG2Kop4H613C6A3pLpXilWBMMXwhIj30CO+BH0ZzCs=",
+  "Hash": "cNq2UzS2EtjlLPVeRZOxXWvrz3uCZ2IRZuoBMYNf3ME=",
   "Source": "GestionStock",
   "BasePath": "_content/GestionStock",
   "Mode": "Default",
@@ -38,6 +38,27 @@
       "OriginalItemSpec": "wwwroot\\images\\2d8af484-9d85-4943-a6d7-2616916bf88b.jpg"
     },
     {
+      "Identity": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\32392664-3976-4f95-974a-12b33f0f0a63.jpg",
+      "SourceId": "GestionStock",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\",
+      "BasePath": "_content/GestionStock",
+      "RelativePath": "images/32392664-3976-4f95-974a-12b33f0f0a63#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lj188ulrky",
+      "Integrity": "L/bkP39nelSpz1VuterUSMgTOJOIrbrPcWwNCeGZ648=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\32392664-3976-4f95-974a-12b33f0f0a63.jpg"
+    },
+    {
       "Identity": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\75b95806-354b-4184-8cb2-1b72e78d3918.jpg",
       "SourceId": "GestionStock",
       "SourceType": "Discovered",
@@ -57,6 +78,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\75b95806-354b-4184-8cb2-1b72e78d3918.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\ee881910-59fc-4b3e-9d78-74092bd0984c.jpg",
+      "SourceId": "GestionStock",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\",
+      "BasePath": "_content/GestionStock",
+      "RelativePath": "images/ee881910-59fc-4b3e-9d78-74092bd0984c#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lj188ulrky",
+      "Integrity": "L/bkP39nelSpz1VuterUSMgTOJOIrbrPcWwNCeGZ648=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ee881910-59fc-4b3e-9d78-74092bd0984c.jpg"
     }
   ],
   "Endpoints": [
@@ -143,6 +185,88 @@
       ]
     },
     {
+      "Route": "images/32392664-3976-4f95-974a-12b33f0f0a63.jpg",
+      "AssetFile": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\32392664-3976-4f95-974a-12b33f0f0a63.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82081"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L/bkP39nelSpz1VuterUSMgTOJOIrbrPcWwNCeGZ648=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 10:13:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-L/bkP39nelSpz1VuterUSMgTOJOIrbrPcWwNCeGZ648="
+        }
+      ]
+    },
+    {
+      "Route": "images/32392664-3976-4f95-974a-12b33f0f0a63.lj188ulrky.jpg",
+      "AssetFile": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\32392664-3976-4f95-974a-12b33f0f0a63.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82081"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L/bkP39nelSpz1VuterUSMgTOJOIrbrPcWwNCeGZ648=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 10:13:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lj188ulrky"
+        },
+        {
+          "Name": "label",
+          "Value": "images/32392664-3976-4f95-974a-12b33f0f0a63.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-L/bkP39nelSpz1VuterUSMgTOJOIrbrPcWwNCeGZ648="
+        }
+      ]
+    },
+    {
       "Route": "images/75b95806-354b-4184-8cb2-1b72e78d3918.jpg",
       "AssetFile": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\75b95806-354b-4184-8cb2-1b72e78d3918.jpg",
       "Selectors": [],
@@ -221,6 +345,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-b9tQCQaS0ViXb1TleSaMmT4x/hAavOWySUbngiM5TsI="
+        }
+      ]
+    },
+    {
+      "Route": "images/ee881910-59fc-4b3e-9d78-74092bd0984c.jpg",
+      "AssetFile": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\ee881910-59fc-4b3e-9d78-74092bd0984c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82081"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L/bkP39nelSpz1VuterUSMgTOJOIrbrPcWwNCeGZ648=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Jul 2025 16:27:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-L/bkP39nelSpz1VuterUSMgTOJOIrbrPcWwNCeGZ648="
+        }
+      ]
+    },
+    {
+      "Route": "images/ee881910-59fc-4b3e-9d78-74092bd0984c.lj188ulrky.jpg",
+      "AssetFile": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\ee881910-59fc-4b3e-9d78-74092bd0984c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82081"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L/bkP39nelSpz1VuterUSMgTOJOIrbrPcWwNCeGZ648=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Jul 2025 16:27:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lj188ulrky"
+        },
+        {
+          "Name": "label",
+          "Value": "images/ee881910-59fc-4b3e-9d78-74092bd0984c.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-L/bkP39nelSpz1VuterUSMgTOJOIrbrPcWwNCeGZ648="
         }
       ]
     }

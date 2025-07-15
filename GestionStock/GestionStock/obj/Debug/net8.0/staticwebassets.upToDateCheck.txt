@@ -1,2 +1,4 @@
 wwwroot\images\2d8af484-9d85-4943-a6d7-2616916bf88b.jpg
+wwwroot\images\32392664-3976-4f95-974a-12b33f0f0a63.jpg
 wwwroot\images\75b95806-354b-4184-8cb2-1b72e78d3918.jpg
+wwwroot\images\ee881910-59fc-4b3e-9d78-74092bd0984c.jpg
