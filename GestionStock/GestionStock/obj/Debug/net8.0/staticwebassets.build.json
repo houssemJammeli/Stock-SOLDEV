@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cNq2UzS2EtjlLPVeRZOxXWvrz3uCZ2IRZuoBMYNf3ME=",
+  "Hash": "OWbEvkRSv9qsAbqOG06uAfNNzFz8EeZhYiPJAO7vitU=",
   "Source": "GestionStock",
   "BasePath": "_content/GestionStock",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "wwwroot\\images\\32392664-3976-4f95-974a-12b33f0f0a63.jpg"
     },
     {
+      "Identity": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\394bfed4-8329-466d-a086-e89520753283.jpg",
+      "SourceId": "GestionStock",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\",
+      "BasePath": "_content/GestionStock",
+      "RelativePath": "images/394bfed4-8329-466d-a086-e89520753283#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5hfsb6tj9v",
+      "Integrity": "p28ZjDTJY1DwqIUpSi8XbMgFeQCvUhXRTuVo/gRco6w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\394bfed4-8329-466d-a086-e89520753283.jpg"
+    },
+    {
       "Identity": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\75b95806-354b-4184-8cb2-1b72e78d3918.jpg",
       "SourceId": "GestionStock",
       "SourceType": "Discovered",
@@ -78,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\75b95806-354b-4184-8cb2-1b72e78d3918.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\780fbc1d-c054-4807-8424-2854ba2cebbe.jpg",
+      "SourceId": "GestionStock",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\",
+      "BasePath": "_content/GestionStock",
+      "RelativePath": "images/780fbc1d-c054-4807-8424-2854ba2cebbe#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "79jiungjb7",
+      "Integrity": "BXRWrTHuZtvjHCusaz4eOH5V9kFQFU2VeGnF3O2jIkY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\780fbc1d-c054-4807-8424-2854ba2cebbe.jpg"
     },
     {
       "Identity": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\ee881910-59fc-4b3e-9d78-74092bd0984c.jpg",
@@ -267,6 +309,88 @@
       ]
     },
     {
+      "Route": "images/394bfed4-8329-466d-a086-e89520753283.5hfsb6tj9v.jpg",
+      "AssetFile": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\394bfed4-8329-466d-a086-e89520753283.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7676"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p28ZjDTJY1DwqIUpSi8XbMgFeQCvUhXRTuVo/gRco6w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 16 Jul 2025 10:25:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5hfsb6tj9v"
+        },
+        {
+          "Name": "label",
+          "Value": "images/394bfed4-8329-466d-a086-e89520753283.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-p28ZjDTJY1DwqIUpSi8XbMgFeQCvUhXRTuVo/gRco6w="
+        }
+      ]
+    },
+    {
+      "Route": "images/394bfed4-8329-466d-a086-e89520753283.jpg",
+      "AssetFile": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\394bfed4-8329-466d-a086-e89520753283.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7676"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p28ZjDTJY1DwqIUpSi8XbMgFeQCvUhXRTuVo/gRco6w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 16 Jul 2025 10:25:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-p28ZjDTJY1DwqIUpSi8XbMgFeQCvUhXRTuVo/gRco6w="
+        }
+      ]
+    },
+    {
       "Route": "images/75b95806-354b-4184-8cb2-1b72e78d3918.jpg",
       "AssetFile": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\75b95806-354b-4184-8cb2-1b72e78d3918.jpg",
       "Selectors": [],
@@ -345,6 +469,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-b9tQCQaS0ViXb1TleSaMmT4x/hAavOWySUbngiM5TsI="
+        }
+      ]
+    },
+    {
+      "Route": "images/780fbc1d-c054-4807-8424-2854ba2cebbe.79jiungjb7.jpg",
+      "AssetFile": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\780fbc1d-c054-4807-8424-2854ba2cebbe.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10002"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BXRWrTHuZtvjHCusaz4eOH5V9kFQFU2VeGnF3O2jIkY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 16 Jul 2025 10:22:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "79jiungjb7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/780fbc1d-c054-4807-8424-2854ba2cebbe.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BXRWrTHuZtvjHCusaz4eOH5V9kFQFU2VeGnF3O2jIkY="
+        }
+      ]
+    },
+    {
+      "Route": "images/780fbc1d-c054-4807-8424-2854ba2cebbe.jpg",
+      "AssetFile": "C:\\Users\\FK Info\\Desktop\\4EmeAnn tek up\\Stage\\Stock-SOLDEV\\GestionStock\\GestionStock\\wwwroot\\images\\780fbc1d-c054-4807-8424-2854ba2cebbe.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10002"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BXRWrTHuZtvjHCusaz4eOH5V9kFQFU2VeGnF3O2jIkY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 16 Jul 2025 10:22:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BXRWrTHuZtvjHCusaz4eOH5V9kFQFU2VeGnF3O2jIkY="
         }
       ]
     },
