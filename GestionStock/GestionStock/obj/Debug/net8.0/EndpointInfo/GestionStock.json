@@ -103,6 +103,37 @@
         }
       }
     },
+    "/api/Chat": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Commandes": {
       "post": {
         "tags": [
@@ -543,6 +574,37 @@
         }
       }
     },
+    "/api/IA/recommandation": {
+      "post": {
+        "tags": [
+          "IA"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IARecommandationRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IARecommandationRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IARecommandationRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/LigneCommandes": {
       "get": {
         "tags": [
@@ -815,6 +877,18 @@
         }
       }
     },
+    "/api/Panier/vider": {
+      "delete": {
+        "tags": [
+          "Panier"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Produits": {
       "get": {
         "tags": [
@@ -978,7 +1052,7 @@
                     "format": "double"
                   },
                   "Categorie": {
-                    "type": "string"
+                    "$ref": "#/components/schemas/CategorieProduit"
                   },
                   "FournisseurId": {
                     "type": "integer",
@@ -1077,7 +1151,7 @@
                     "format": "double"
                   },
                   "Categorie": {
-                    "type": "string"
+                    "$ref": "#/components/schemas/CategorieProduit"
                   },
                   "FournisseurId": {
                     "type": "integer",
@@ -1352,6 +1426,26 @@
   },
   "components": {
     "schemas": {
+      "CategorieProduit": {
+        "enum": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "ChatRequestDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Commande": {
         "type": "object",
         "properties": {
@@ -1562,6 +1656,28 @@
         },
         "additionalProperties": false
       },
+      "IARecommandationRequestDto": {
+        "type": "object",
+        "properties": {
+          "poids": {
+            "type": "number",
+            "format": "double"
+          },
+          "taille": {
+            "type": "number",
+            "format": "double"
+          },
+          "objectif": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "niveau": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "LigneCommande": {
         "type": "object",
         "properties": {
@@ -1669,8 +1785,7 @@
             "format": "double"
           },
           "categorie": {
-            "type": "string",
-            "nullable": true
+            "$ref": "#/components/schemas/CategorieProduit"
           },
           "imageUrl": {
             "type": "string",
@@ -1717,8 +1832,7 @@
             "format": "double"
           },
           "categorie": {
-            "type": "string",
-            "nullable": true
+            "$ref": "#/components/schemas/CategorieProduit"
           },
           "fournisseurId": {
             "type": "integer",

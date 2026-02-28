@@ -1,4 +1,6 @@
-﻿namespace GestionStock.Models
+﻿using GestionStock.Models.EnumCategorieProduit;
+
+namespace GestionStock.Models
 {
     public class Produit
     {
@@ -7,7 +9,7 @@
         public string Description { get; set; }
         public int QuantiteEnStock { get; set; }
         public decimal PrixUnitaire { get; set; }
-        public string Categorie { get; set; }
+        public CategorieProduit Categorie { get; set; }
         public string ImageUrl { get; set; }
 
         public ICollection<LigneCommande> LignesCommande { get; set; }

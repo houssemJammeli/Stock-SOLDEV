@@ -87,6 +87,7 @@ namespace GestionStock.Controllers
         {
             var commandes = await _context.Commandes
                 .Include(c => c.LignesCommande)
+                .ThenInclude(l => l.Produit)
                 .Where(c => c.ClientId == clientId)
                 .ToListAsync();
 

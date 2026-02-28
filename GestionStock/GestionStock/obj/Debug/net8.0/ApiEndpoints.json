@@ -62,6 +62,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GestionStock.Controllers.ChatController",
+    "Method": "EnvoyerMessage",
+    "RelativePath": "api/Chat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "GestionStock.DTOs.ChatDTOs.ChatRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GestionStock.Controllers.CommandesController",
     "Method": "CreerCommande",
     "RelativePath": "api/Commandes",
@@ -316,6 +332,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GestionStock.Controllers.IAController",
+    "Method": "Recommandation",
+    "RelativePath": "api/IA/recommandation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "GestionStock.DTOs.IARecommandationDTOs.IARecommandationRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GestionStock.Controllers.LigneCommandesController",
     "Method": "GetLignesCommande",
     "RelativePath": "api/LigneCommandes",
@@ -474,6 +506,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionStock.Controllers.PanierController",
+    "Method": "ViderPanier",
+    "RelativePath": "api/Panier/vider",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

@@ -1,4 +1,6 @@
-﻿namespace GestionStock.DTOs.ProduitDTOs
+﻿using GestionStock.Models.EnumCategorieProduit;
+
+namespace GestionStock.DTOs.ProduitDTOs
 {
     public class ProduitDto
     {
@@ -7,7 +9,7 @@
         public string Description { get; set; }
         public int QuantiteEnStock { get; set; }
         public decimal PrixUnitaire { get; set; }
-        public string Categorie { get; set; }
+        public CategorieProduit Categorie { get; set; }
         public int FournisseurId { get; set; }
         public IFormFile Image { get; set; }
 

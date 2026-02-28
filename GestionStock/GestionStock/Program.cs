@@ -1,7 +1,8 @@
-﻿using System.Text;
-using GestionStock.Context;
+﻿using GestionStock.Context;
+using GestionStock.Services.IA;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 //houssem
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
@@ -92,6 +93,10 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 //tester auth avec swagger
+
+//IA
+builder.Services.AddHttpClient<IAService>();
+//IA
 
 //Houssem
 

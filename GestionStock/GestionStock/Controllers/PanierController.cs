@@ -64,5 +64,15 @@ namespace GestionStock.Controllers
             }
             return Ok(panier);
         }
+
+        // DELETE: api/Panier/vider
+        [HttpDelete("vider")]
+        public IActionResult ViderPanier()
+        {
+            var panier = GetPanier();
+            panier.Lignes.Clear();
+            return NoContent();
+        }
+
     }
 }

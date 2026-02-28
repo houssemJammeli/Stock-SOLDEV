@@ -1,4 +1,5 @@
 ﻿using GestionStock.Models;
+using GestionStock.Models.EnumCategorieProduit;
 using Microsoft.EntityFrameworkCore;
 
 namespace GestionStock.Context
@@ -48,6 +49,11 @@ namespace GestionStock.Context
                 .WithMany(f => f.Produits)
                 .HasForeignKey(p => p.FournisseurId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Produit>()
+              .Property(u => u.Categorie)
+              .HasConversion<string>()
+            ;
         }
     }
 }
