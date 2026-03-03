@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "C+XP1OttkTU=",
+  "dgSpecHash": "NClGUD0de/U=",
   "success": true,
   "projectFilePath": "C:\\Users\\houss\\Desktop\\Tekup\\Backend-Stock\\Stock-SOLDEV\\GestionStock\\GestionStock.Tests\\GestionStock.Tests.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\houss\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.6\\microsoft.entityframeworkcore.9.0.6.nupkg.sha512",
     "C:\\Users\\houss\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.6\\microsoft.entityframeworkcore.abstractions.9.0.6.nupkg.sha512",
     "C:\\Users\\houss\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.6\\microsoft.entityframeworkcore.analyzers.9.0.6.nupkg.sha512",
+    "C:\\Users\\houss\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\8.0.8\\microsoft.entityframeworkcore.inmemory.8.0.8.nupkg.sha512",
     "C:\\Users\\houss\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.6\\microsoft.entityframeworkcore.relational.9.0.6.nupkg.sha512",
     "C:\\Users\\houss\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\9.0.6\\microsoft.entityframeworkcore.sqlserver.9.0.6.nupkg.sha512",
     "C:\\Users\\houss\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
