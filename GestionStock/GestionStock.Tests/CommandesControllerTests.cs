@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace GestionStock.Tests
 {
@@ -24,19 +24,26 @@ namespace GestionStock.Tests
             return new ApplicationDbContext(options);
         }
 
+        private Utilisateur CreateClient()
+        {
+            return new Utilisateur
+            {
+                Nom = "Client",
+                Email = "client@test.com",
+                Password = "hashed",
+                Role = Role.Client,
+                Adresse = "Tunis",
+                Telephone = "12345678"
+            };
+        }
+
         // ✅ CREER COMMANDE SUCCESS
         [Fact]
         public async Task CreerCommande_ReturnsOk_WhenClientExists()
         {
             var context = GetInMemoryDbContext();
 
-            var client = new Utilisateur
-            {
-                Nom = "Client",
-                Email = "client@test.com",
-                Password = "hashed",
-                Role = Role.Client
-            };
+            var client = CreateClient();
 
             context.Utilisateurs.Add(client);
             await context.SaveChangesAsync();
@@ -90,13 +97,7 @@ namespace GestionStock.Tests
         {
             var context = GetInMemoryDbContext();
 
-            var client = new Utilisateur
-            {
-                Nom = "Client",
-                Email = "client@test.com",
-                Password = "hashed",
-                Role = Role.Client
-            };
+            var client = CreateClient();
 
             context.Utilisateurs.Add(client);
             await context.SaveChangesAsync();
@@ -104,7 +105,7 @@ namespace GestionStock.Tests
             var commande = new Commande
             {
                 ClientId = client.Id,
-                DateVente = DateTime.Now.AddDays(-8), // ancienne commande
+                DateVente = DateTime.Now.AddDays(-8),
                 Total = 200,
                 TypeLivraison = TypeLivraison.Standard,
                 EtatCommande = EtatCommande.Preparation
@@ -122,19 +123,13 @@ namespace GestionStock.Tests
             Assert.Equal(EtatCommande.Livree, commandes.First().EtatCommande);
         }
 
-        // ✅ GET TOUTES LES COMMANDES (ADMIN)
+        // ✅ GET TOUTES LES COMMANDES
         [Fact]
         public async Task GetToutesLesCommandes_ReturnsCommandeDtoList()
         {
             var context = GetInMemoryDbContext();
 
-            var client = new Utilisateur
-            {
-                Nom = "Client",
-                Email = "client@test.com",
-                Password = "hashed",
-                Role = Role.Client
-            };
+            var client = CreateClient();
 
             context.Utilisateurs.Add(client);
             await context.SaveChangesAsync();

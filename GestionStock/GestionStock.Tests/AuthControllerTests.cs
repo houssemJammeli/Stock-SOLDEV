@@ -8,9 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Xunit;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GestionStock.Tests
 {
@@ -38,6 +35,19 @@ namespace GestionStock.Tests
             return new ConfigurationBuilder()
                 .AddInMemoryCollection(settings)
                 .Build();
+        }
+
+        private Utilisateur CreateUser()
+        {
+            return new Utilisateur
+            {
+                Nom = "User",
+                Email = "user@mail.com",
+                Password = BCrypt.Net.BCrypt.HashPassword("123456"),
+                Role = Role.Admin,
+                Adresse = "Tunis",
+                Telephone = "12345678"
+            };
         }
 
         // ✅ REGISTER SUCCESS
@@ -76,8 +86,11 @@ namespace GestionStock.Tests
                 Nom = "Existing",
                 Email = "exist@mail.com",
                 Password = "hashed",
-                Role = Role.Admin
+                Role = Role.Admin,
+                Adresse = "Tunis",
+                Telephone = "12345678"
             });
+
             await context.SaveChangesAsync();
 
             var controller = new AuthController(context, config);
@@ -87,7 +100,9 @@ namespace GestionStock.Tests
                 Nom = "Test",
                 Email = "exist@mail.com",
                 Password = "123456",
-                Role = "Admin"
+                Role = "Admin",
+                Telephone = "12345678",
+                Adresse = "Tunis"
             };
 
             var result = await controller.Register(dto);
@@ -102,13 +117,7 @@ namespace GestionStock.Tests
             var context = GetInMemoryDbContext();
             var config = GetFakeConfiguration();
 
-            var user = new Utilisateur
-            {
-                Nom = "User",
-                Email = "user@mail.com",
-                Password = BCrypt.Net.BCrypt.HashPassword("correctpassword"),
-                Role = Role.Admin
-            };
+            var user = CreateUser();
 
             context.Utilisateurs.Add(user);
             context.SaveChanges();
@@ -133,13 +142,7 @@ namespace GestionStock.Tests
             var context = GetInMemoryDbContext();
             var config = GetFakeConfiguration();
 
-            var user = new Utilisateur
-            {
-                Nom = "User",
-                Email = "user@mail.com",
-                Password = BCrypt.Net.BCrypt.HashPassword("123456"),
-                Role = Role.Admin
-            };
+            var user = CreateUser();
 
             context.Utilisateurs.Add(user);
             context.SaveChanges();
