@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NClGUD0de/U=",
+  "dgSpecHash": "TvQpdk83CPk=",
   "success": true,
   "projectFilePath": "C:\\Users\\houss\\Desktop\\Tekup\\Backend-Stock\\Stock-SOLDEV\\GestionStock\\GestionStock.Tests\\GestionStock.Tests.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\houss\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\houss\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\houss\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
+    "C:\\Users\\houss\\.nuget\\packages\\coverlet.msbuild\\8.0.0\\coverlet.msbuild.8.0.0.nupkg.sha512",
     "C:\\Users\\houss\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.17\\microsoft.aspnetcore.authentication.jwtbearer.8.0.17.nupkg.sha512",
     "C:\\Users\\houss\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\houss\\.nuget\\packages\\microsoft.codecoverage\\17.12.0\\microsoft.codecoverage.17.12.0.nupkg.sha512",

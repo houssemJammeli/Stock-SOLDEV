@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="08eb2cb3-bbc8-448a-a137-1c656e0a2030" name="houss@HOUSSEMJA3 2026-03-05 14:57:09" runUser="HOUSSEMJA3\houss" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-03-05T14:57:09.3095778+01:00" queuing="2026-03-05T14:57:09.3095781+01:00" start="2026-03-05T14:57:08.0548114+01:00" finish="2026-03-05T14:57:09.3152047+01:00" />
+  <TestSettings name="default" id="cf6d9179-9fc8-4517-844c-83a9c463ed90">
+    <Deployment runDeploymentRoot="houss_HOUSSEMJA3_2026-03-05_14_57_09" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="67b6f742-9916-4afe-bd8f-a1dd1f8632f2" testId="bb477961-61e1-3a29-afee-fbd06cbec546" testName="GestionStock.Tests.PanierControllerTests.SupprimerProduitAuPanier_RemovesProduct" computerName="HOUSSEMJA3" duration="00:00:00.0009862" startTime="2026-03-05T14:57:08.7673456+01:00" endTime="2026-03-05T14:57:08.7673458+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67b6f742-9916-4afe-bd8f-a1dd1f8632f2" />
+    <UnitTestResult executionId="2dc05265-414c-4808-84e4-4524cda2da44" testId="87ba4383-d2db-099a-a8b2-37ac3adc6b4c" testName="GestionStock.Tests.PanierControllerTests.AjouterProduitAuPanier_AddsNewProduct" computerName="HOUSSEMJA3" duration="00:00:00.0033339" startTime="2026-03-05T14:57:08.7663852+01:00" endTime="2026-03-05T14:57:08.7663853+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2dc05265-414c-4808-84e4-4524cda2da44" />
+    <UnitTestResult executionId="76b85c82-5ae1-4ee5-8490-f866abf8f965" testId="b3f0d47d-82da-70e2-2b78-e2c5305462e5" testName="GestionStock.Tests.ProduitsControllerTests.GetProduits_ReturnsEmptyList_WhenNoProduit" computerName="HOUSSEMJA3" duration="00:00:00.0310626" startTime="2026-03-05T14:57:09.2229984+01:00" endTime="2026-03-05T14:57:09.2229986+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="76b85c82-5ae1-4ee5-8490-f866abf8f965" />
+    <UnitTestResult executionId="e5f959c7-f6cf-4848-b69e-ad297e5c5eb5" testId="12a4ee6e-e8aa-f7ee-edb4-2852fd710cba" testName="GestionStock.Tests.ProduitsControllerTests.GetProduit_ReturnsNotFound_WhenIdDoesNotExist" computerName="HOUSSEMJA3" duration="00:00:00.0354572" startTime="2026-03-05T14:57:09.1918504+01:00" endTime="2026-03-05T14:57:09.1918506+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e5f959c7-f6cf-4848-b69e-ad297e5c5eb5" />
+    <UnitTestResult executionId="ff234c7e-05a3-4480-b8b9-5bedde9d5f24" testId="7e4c2388-329f-ad40-1ebe-40c938ab3227" testName="GestionStock.Tests.PanierControllerTests.AjouterProduitAuPanier_IncrementsQuantity_WhenProductExists" computerName="HOUSSEMJA3" duration="00:00:00.0004620" startTime="2026-03-05T14:57:08.7682363+01:00" endTime="2026-03-05T14:57:08.7682365+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff234c7e-05a3-4480-b8b9-5bedde9d5f24" />
+    <UnitTestResult executionId="ef9ada0a-703f-4adb-9dc8-94a321680972" testId="352ba9d8-fc48-0d09-ab3d-dd06ce38d008" testName="GestionStock.Tests.PanierControllerTests.Get_ReturnsEmptyPanier_WhenNoProduct" computerName="HOUSSEMJA3" duration="00:00:00.0062501" startTime="2026-03-05T14:57:08.7639062+01:00" endTime="2026-03-05T14:57:08.7639063+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ef9ada0a-703f-4adb-9dc8-94a321680972" />
+    <UnitTestResult executionId="8c05a91b-52e2-41c2-94b9-0e1078562418" testId="80a9335c-bcba-c032-33a4-bb12ec229053" testName="GestionStock.Tests.UnitTest1.Test1" computerName="HOUSSEMJA3" duration="00:00:00.0019810" startTime="2026-03-05T14:57:08.7610467+01:00" endTime="2026-03-05T14:57:08.7610687+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c05a91b-52e2-41c2-94b9-0e1078562418" />
+    <UnitTestResult executionId="151a2c72-735e-4c4c-be7e-82275488715c" testId="a779836e-5eac-5a55-12fa-f19eb9ac0455" testName="GestionStock.Tests.ProduitsControllerTests.DeleteProduit_ReturnsNotFound_WhenProduitDoesNotExist" computerName="HOUSSEMJA3" duration="00:00:00.3995732" startTime="2026-03-05T14:57:09.1561845+01:00" endTime="2026-03-05T14:57:09.1561848+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="151a2c72-735e-4c4c-be7e-82275488715c" />
+    <UnitTestResult executionId="677af4a2-cce4-4d8e-9ca6-6cad063a7af3" testId="87b7009b-ad33-ce57-cd9e-0413f2afabb4" testName="GestionStock.Tests.PanierControllerTests.ViderPanier_ClearsAllProducts" computerName="HOUSSEMJA3" duration="00:00:00.0002201" startTime="2026-03-05T14:57:08.7676327+01:00" endTime="2026-03-05T14:57:08.7676329+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="677af4a2-cce4-4d8e-9ca6-6cad063a7af3" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="GestionStock.Tests.ProduitsControllerTests.GetProduits_ReturnsEmptyList_WhenNoProduit" storage="c:\users\houss\desktop\tekup\backend-stock\stock-soldev\gestionstock\gestionstock.tests\bin\debug\net8.0\gestionstock.tests.dll" id="b3f0d47d-82da-70e2-2b78-e2c5305462e5">
+      <Execution id="76b85c82-5ae1-4ee5-8490-f866abf8f965" />
+      <TestMethod codeBase="C:\Users\houss\Desktop\Tekup\Backend-Stock\Stock-SOLDEV\GestionStock\GestionStock.Tests\bin\Debug\net8.0\GestionStock.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="GestionStock.Tests.ProduitsControllerTests" name="GetProduits_ReturnsEmptyList_WhenNoProduit" />
+    </UnitTest>
+    <UnitTest name="GestionStock.Tests.PanierControllerTests.AjouterProduitAuPanier_IncrementsQuantity_WhenProductExists" storage="c:\users\houss\desktop\tekup\backend-stock\stock-soldev\gestionstock\gestionstock.tests\bin\debug\net8.0\gestionstock.tests.dll" id="7e4c2388-329f-ad40-1ebe-40c938ab3227">
+      <Execution id="ff234c7e-05a3-4480-b8b9-5bedde9d5f24" />
+      <TestMethod codeBase="C:\Users\houss\Desktop\Tekup\Backend-Stock\Stock-SOLDEV\GestionStock\GestionStock.Tests\bin\Debug\net8.0\GestionStock.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="GestionStock.Tests.PanierControllerTests" name="AjouterProduitAuPanier_IncrementsQuantity_WhenProductExists" />
+    </UnitTest>
+    <UnitTest name="GestionStock.Tests.PanierControllerTests.Get_ReturnsEmptyPanier_WhenNoProduct" storage="c:\users\houss\desktop\tekup\backend-stock\stock-soldev\gestionstock\gestionstock.tests\bin\debug\net8.0\gestionstock.tests.dll" id="352ba9d8-fc48-0d09-ab3d-dd06ce38d008">
+      <Execution id="ef9ada0a-703f-4adb-9dc8-94a321680972" />
+      <TestMethod codeBase="C:\Users\houss\Desktop\Tekup\Backend-Stock\Stock-SOLDEV\GestionStock\GestionStock.Tests\bin\Debug\net8.0\GestionStock.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="GestionStock.Tests.PanierControllerTests" name="Get_ReturnsEmptyPanier_WhenNoProduct" />
+    </UnitTest>
+    <UnitTest name="GestionStock.Tests.ProduitsControllerTests.GetProduit_ReturnsNotFound_WhenIdDoesNotExist" storage="c:\users\houss\desktop\tekup\backend-stock\stock-soldev\gestionstock\gestionstock.tests\bin\debug\net8.0\gestionstock.tests.dll" id="12a4ee6e-e8aa-f7ee-edb4-2852fd710cba">
+      <Execution id="e5f959c7-f6cf-4848-b69e-ad297e5c5eb5" />
+      <TestMethod codeBase="C:\Users\houss\Desktop\Tekup\Backend-Stock\Stock-SOLDEV\GestionStock\GestionStock.Tests\bin\Debug\net8.0\GestionStock.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="GestionStock.Tests.ProduitsControllerTests" name="GetProduit_ReturnsNotFound_WhenIdDoesNotExist" />
+    </UnitTest>
+    <UnitTest name="GestionStock.Tests.PanierControllerTests.SupprimerProduitAuPanier_RemovesProduct" storage="c:\users\houss\desktop\tekup\backend-stock\stock-soldev\gestionstock\gestionstock.tests\bin\debug\net8.0\gestionstock.tests.dll" id="bb477961-61e1-3a29-afee-fbd06cbec546">
+      <Execution id="67b6f742-9916-4afe-bd8f-a1dd1f8632f2" />
+      <TestMethod codeBase="C:\Users\houss\Desktop\Tekup\Backend-Stock\Stock-SOLDEV\GestionStock\GestionStock.Tests\bin\Debug\net8.0\GestionStock.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="GestionStock.Tests.PanierControllerTests" name="SupprimerProduitAuPanier_RemovesProduct" />
+    </UnitTest>
+    <UnitTest name="GestionStock.Tests.PanierControllerTests.AjouterProduitAuPanier_AddsNewProduct" storage="c:\users\houss\desktop\tekup\backend-stock\stock-soldev\gestionstock\gestionstock.tests\bin\debug\net8.0\gestionstock.tests.dll" id="87ba4383-d2db-099a-a8b2-37ac3adc6b4c">
+      <Execution id="2dc05265-414c-4808-84e4-4524cda2da44" />
+      <TestMethod codeBase="C:\Users\houss\Desktop\Tekup\Backend-Stock\Stock-SOLDEV\GestionStock\GestionStock.Tests\bin\Debug\net8.0\GestionStock.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="GestionStock.Tests.PanierControllerTests" name="AjouterProduitAuPanier_AddsNewProduct" />
+    </UnitTest>
+    <UnitTest name="GestionStock.Tests.UnitTest1.Test1" storage="c:\users\houss\desktop\tekup\backend-stock\stock-soldev\gestionstock\gestionstock.tests\bin\debug\net8.0\gestionstock.tests.dll" id="80a9335c-bcba-c032-33a4-bb12ec229053">
+      <Execution id="8c05a91b-52e2-41c2-94b9-0e1078562418" />
+      <TestMethod codeBase="C:\Users\houss\Desktop\Tekup\Backend-Stock\Stock-SOLDEV\GestionStock\GestionStock.Tests\bin\Debug\net8.0\GestionStock.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="GestionStock.Tests.UnitTest1" name="Test1" />
+    </UnitTest>
+    <UnitTest name="GestionStock.Tests.ProduitsControllerTests.DeleteProduit_ReturnsNotFound_WhenProduitDoesNotExist" storage="c:\users\houss\desktop\tekup\backend-stock\stock-soldev\gestionstock\gestionstock.tests\bin\debug\net8.0\gestionstock.tests.dll" id="a779836e-5eac-5a55-12fa-f19eb9ac0455">
+      <Execution id="151a2c72-735e-4c4c-be7e-82275488715c" />
+      <TestMethod codeBase="C:\Users\houss\Desktop\Tekup\Backend-Stock\Stock-SOLDEV\GestionStock\GestionStock.Tests\bin\Debug\net8.0\GestionStock.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="GestionStock.Tests.ProduitsControllerTests" name="DeleteProduit_ReturnsNotFound_WhenProduitDoesNotExist" />
+    </UnitTest>
+    <UnitTest name="GestionStock.Tests.PanierControllerTests.ViderPanier_ClearsAllProducts" storage="c:\users\houss\desktop\tekup\backend-stock\stock-soldev\gestionstock\gestionstock.tests\bin\debug\net8.0\gestionstock.tests.dll" id="87b7009b-ad33-ce57-cd9e-0413f2afabb4">
+      <Execution id="677af4a2-cce4-4d8e-9ca6-6cad063a7af3" />
+      <TestMethod codeBase="C:\Users\houss\Desktop\Tekup\Backend-Stock\Stock-SOLDEV\GestionStock\GestionStock.Tests\bin\Debug\net8.0\GestionStock.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="GestionStock.Tests.PanierControllerTests" name="ViderPanier_ClearsAllProducts" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="bb477961-61e1-3a29-afee-fbd06cbec546" executionId="67b6f742-9916-4afe-bd8f-a1dd1f8632f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87ba4383-d2db-099a-a8b2-37ac3adc6b4c" executionId="2dc05265-414c-4808-84e4-4524cda2da44" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3f0d47d-82da-70e2-2b78-e2c5305462e5" executionId="76b85c82-5ae1-4ee5-8490-f866abf8f965" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12a4ee6e-e8aa-f7ee-edb4-2852fd710cba" executionId="e5f959c7-f6cf-4848-b69e-ad297e5c5eb5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7e4c2388-329f-ad40-1ebe-40c938ab3227" executionId="ff234c7e-05a3-4480-b8b9-5bedde9d5f24" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="352ba9d8-fc48-0d09-ab3d-dd06ce38d008" executionId="ef9ada0a-703f-4adb-9dc8-94a321680972" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="80a9335c-bcba-c032-33a4-bb12ec229053" executionId="8c05a91b-52e2-41c2-94b9-0e1078562418" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a779836e-5eac-5a55-12fa-f19eb9ac0455" executionId="151a2c72-735e-4c4c-be7e-82275488715c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87b7009b-ad33-ce57-cd9e-0413f2afabb4" executionId="677af4a2-cce4-4d8e-9ca6-6cad063a7af3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Les résultats ne figurent pas dans une liste" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Tous les résultats chargés" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="9" executed="9" passed="9" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.20)&#xD;
+[xUnit.net 00:00:00.31]   Discovering: GestionStock.Tests&#xD;
+[xUnit.net 00:00:00.34]   Discovered:  GestionStock.Tests&#xD;
+[xUnit.net 00:00:00.34]   Starting:    GestionStock.Tests&#xD;
+[xUnit.net 00:00:00.84]   Finished:    GestionStock.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
