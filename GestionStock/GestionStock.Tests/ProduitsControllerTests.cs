@@ -78,6 +78,7 @@ namespace GestionStock.Tests
                 QuantiteEnStock = 5,
                 PrixUnitaire = 15,
                 Categorie = Models.EnumCategorieProduit.CategorieProduit.Sport,
+                ImageUrl = "images/default.jpg",
                 FournisseurId = 1
             };
 
@@ -111,11 +112,12 @@ namespace GestionStock.Tests
         [Fact]
         public async Task AjouterProduitAvecImage_ReturnsOk_WhenImageProvided()
         {
+            Directory.CreateDirectory("wwwroot/images"); // ← important
+
             var context = GetInMemoryDbContext();
             var controller = new ProduitsController(context);
 
-            // Simuler un fichier avec du contenu
-            var content = new byte[] { 1, 2, 3 }; // quelques bytes
+            var content = new byte[] { 1, 2, 3 };
             var stream = new MemoryStream(content);
             var file = new FormFile(stream, 0, stream.Length, "file", "test.jpg")
             {
