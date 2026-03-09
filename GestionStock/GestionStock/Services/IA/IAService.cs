@@ -13,7 +13,7 @@ namespace GestionStock.Services.IA
             _httpClient = httpClient;
         }
 
-        public async Task<IARecommandationResponseDto> RecommanderAsync(IARecommandationRequestDto dto)
+        public virtual async Task<IARecommandationResponseDto> RecommanderAsync(IARecommandationRequestDto dto)
         {
             var json = JsonSerializer.Serialize(dto);
 
