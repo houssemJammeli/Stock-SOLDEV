@@ -69,7 +69,7 @@ namespace GestionStock.Tests
                 Produits = new List<int> { produit.Id }
             };
 
-            var mockIA = new Mock<IAService>();
+            var mockIA = new Mock<IAService>(new HttpClient());
             mockIA.Setup(s => s.RecommanderAsync(It.IsAny<IARecommandationRequestDto>()))
                 .ReturnsAsync(iaResponse);
 
@@ -101,7 +101,7 @@ namespace GestionStock.Tests
                 Produits = new List<int>()
             };
 
-            var mockIA = new Mock<IAService>();
+            var mockIA = new Mock<IAService>(new HttpClient());
             mockIA.Setup(s => s.RecommanderAsync(It.IsAny<IARecommandationRequestDto>()))
                 .ReturnsAsync(iaResponse);
 
@@ -127,7 +127,7 @@ namespace GestionStock.Tests
         {
             var context = GetDb();
 
-            var mockIA = new Mock<IAService>();
+            var mockIA = new Mock<IAService>(new HttpClient());
             mockIA.Setup(s => s.RecommanderAsync(It.IsAny<IARecommandationRequestDto>()))
                 .ThrowsAsync(new Exception("IA error"));
 
