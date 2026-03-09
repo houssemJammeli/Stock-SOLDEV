@@ -44,6 +44,7 @@ namespace GestionStock.Tests
                 Description = "Produit IA",
                 QuantiteEnStock = 10,
                 PrixUnitaire = 20,
+                ImageUrl = "test.jpg",
                 FournisseurId = fournisseurId
             };
         }

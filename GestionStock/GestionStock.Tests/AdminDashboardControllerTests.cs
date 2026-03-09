@@ -55,6 +55,7 @@ namespace GestionStock.Tests
                 Description = "Produit pour test",
                 QuantiteEnStock = 100,
                 PrixUnitaire = 50,
+                ImageUrl = "test.jpg",
                 FournisseurId = fournisseurId
             };
         }
