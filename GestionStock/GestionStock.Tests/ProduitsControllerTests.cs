@@ -114,8 +114,14 @@ namespace GestionStock.Tests
             var context = GetInMemoryDbContext();
             var controller = new ProduitsController(context);
 
-            var stream = new MemoryStream();
-            var file = new FormFile(stream, 0, 0, "file", "test.jpg");
+            // Simuler un fichier avec du contenu
+            var content = new byte[] { 1, 2, 3 }; // quelques bytes
+            var stream = new MemoryStream(content);
+            var file = new FormFile(stream, 0, stream.Length, "file", "test.jpg")
+            {
+                Headers = new HeaderDictionary(),
+                ContentType = "image/jpeg"
+            };
 
             var dto = new ProduitUploadDto
             {
